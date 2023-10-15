@@ -32,4 +32,11 @@ try
 
     app.Run();
 }
-
+catch(Exception ex)
+{
+    logger.Error(ex, "Stopped program because exception");
+}
+finally
+{
+    LogManager.Shutdown();
+}
